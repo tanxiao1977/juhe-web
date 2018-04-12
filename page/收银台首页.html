@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+		<title>新生支付</title>
+		<link rel="stylesheet" href="../css/frozen.css" />
+		<link rel="stylesheet" href="../css/main.css" />
+		<script type="text/javascript" src="../js/lib/zeptojs/zepto.min.js"></script>
+		<script type="text/javascript" src="../js/frozen.js" ></script>
+		<script type="text/javascript" src="../js/main.js" ></script>
+	</head>
+	<body>
+		<header class="ui-header ui-header-positive ui-border-b">
+            <i class="ui-icon-return" onclick="history.back()"></i>
+			<h1 class="fz-bold">支付订单</h1>
+        </header>
+		<section class="ui-container">
+			<section id="layout">
+				<div class="block-pad20 marginBottom10">
+					<div class="ui-flex ui-flex-pack-center ">
+						<div class="fz-title">商户名称</div>
+					</div>
+					<div class="ui-flex ui-flex-pack-center">
+						<div class="fz-40">&yen;100.00</div>
+					</div>
+				    <ul class="ui-justify-flex ui-whitespace ui-line-dot">
+				        <li class="fz-14 fz-gray">订单编号</li>
+				        <li class="fz-14 fz-gray">20170416534037651</li>				        
+				    </ul>
+			    </div>
+			    <div class="block-pad20">
+				    <ul class="ui-justify-flex ui-whitespace ui-border-b paddingtb10">
+				        <li>
+				        	<div class="icon-weixin">微信支付<br/><span class="fz-14 fz-gray">微信安全支付</span></div>
+				       	</li>
+				        <li>            
+				        	<label class="ui-radio" for="radio">
+				                <input type="radio" name="radio">
+				            </label>
+        				</li>				        
+				    </ul>
+				    <ul class="ui-justify-flex ui-whitespace ui-border-b paddingtb10">
+				        <li>
+							<div class="icon-alipay">支付宝支付<br/><span class="fz-14 fz-gray">支付宝安全支付</span></div>
+				        </li>
+				        <li>
+				        	<label class="ui-radio" for="radio">
+				                <input type="radio" name="radio">
+				            </label>
+				        </li>				        
+				    </ul>
+				    <ul class="ui-justify-flex ui-whitespace ui-border-b paddingtb10">
+				        <li>
+							<div class="icon-hnpay">快捷支付<br/><span class="fz-14 fz-gray">由新生支付为您服务</span></div>
+				        </li>
+				        <li>
+				        	<label class="ui-radio" for="radio">
+				                <input type="radio" name="radio">
+				            </label>
+				        </li>				        
+				    </ul>
+					<div class="ui-btn-wrap">
+					    <button class="ui-btn-lg ui-btn-danger">
+					     	确认支付
+					    </button>
+					</div>			    				    			    	
+			    </div>
+			    <div class="ui-flex ui-flex-pack-center footer">
+			    	<img src="../image/logo.png" />
+			    </div>		    
+			</section>
+		</section>
+		
+		<script>
+		</script>
+	</body>
+</html>

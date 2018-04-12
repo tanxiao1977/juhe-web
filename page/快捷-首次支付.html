@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+		<title>新生支付</title>
+		<link rel="stylesheet" href="../css/frozen.css" />
+		<link rel="stylesheet" href="../css/main.css" />
+		<script type="text/javascript" src="../js/lib/zeptojs/zepto.min.js"></script>
+		<script type="text/javascript" src="../js/frozen.js" ></script>
+		<script type="text/javascript" src="../js/main.js" ></script>
+	</head>
+	<body>
+		<header class="ui-header ui-header-positive ui-border-b">
+            <i class="ui-icon-return" onclick="history.back()"></i>
+			<h1 class="fz-bold">支付订单</h1>
+        </header>
+		<section class="ui-container">
+			<section id="layout">
+				<div class="block-pad20 marginBottom10">
+					<div class="ui-flex ui-flex-pack-center ">
+						<div class="fz-title">商户名称</div>
+					</div>
+					<div class="ui-flex ui-flex-pack-center">
+						<div class="fz-40">&yen;100.00</div>
+					</div>
+				    <ul class="ui-justify-flex ui-whitespace ui-line-dot">
+				        <li class="fz-14 fz-gray">订单编号</li>
+				        <li class="fz-14 fz-gray">20170416534037651</li>				        
+				    </ul>
+			    </div>
+			    <div class="block-pad20">
+			        <div class="ui-form-item ui-form-item-l ui-border-b">
+			            <label class="ui-border-r">
+			                银行卡号
+			            </label>
+			            <input type="text" placeholder="请输入银行卡号">
+			            <a href="#" class="ui-icon-close">
+			            </a>
+			        </div>
+			        <div class="ui-form-item ui-form-item-l ui-border-b">
+			            <label class="ui-border-r">
+			                开户银行
+			            </label>
+			            <input type="text" placeholder="请输入银行名称">
+			            <a href="#" class="ui-icon-search i-search"></a>
+			        </div>
+					<p class="fz-14 ui-flex ui-flex-pack-center paddingtb20"> 
+					    <label class="ui-checkbox-s">
+					        <input type="checkbox" name="checkbox" checked>
+					    </label>
+					     我同意<a href="#">《新生快捷支付服务协议》</a>
+					</p>				        		    	
+					<div class="ui-btn-wrap">
+					    <button class="ui-btn-lg ui-btn-danger">
+					     	下一步
+					    </button>
+					</div>			    				    			    	
+			    </div>
+			    <div class="ui-flex ui-flex-pack-center footer">
+			    	<img src="../image/logo.png" />
+			    </div>		    
+			</section>
+		</section>
+		
+		<script>
+		</script>
+	</body>
+</html>

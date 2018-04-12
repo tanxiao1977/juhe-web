@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+		<title>新生支付</title>
+		<link rel="stylesheet" href="../css/frozen.css" />
+		<link rel="stylesheet" href="../css/main.css" />
+		<script type="text/javascript" src="../js/lib/zeptojs/zepto.min.js"></script>
+		<script type="text/javascript" src="../js/frozen.js" ></script>
+		<script type="text/javascript" src="../js/main.js" ></script>
+	</head>
+	<body style="background:#fff">
+		<header class="ui-header ui-header-positive ui-border-b">
+            <i class="ui-icon-return" onclick="history.back()"></i>
+			<h1 class="fz-bold">支付订单</h1>
+        </header>
+		<section class="ui-container">
+			<section id="layout" style="background:#eee">
+				<div class="block-pad20 marginBottom10">
+					<div class="ui-flex ui-flex-pack-center ">
+						<div class="fz-title">商户名称</div>
+					</div>
+					<div class="ui-flex ui-flex-pack-center">
+						<div class="fz-40">&yen;100.00</div>
+					</div>
+				    <ul class="ui-justify-flex ui-whitespace ui-line-dot">
+				        <li class="fz-14 fz-gray">订单编号</li>
+				        <li class="fz-14 fz-gray">20170416534037651</li>				        
+				    </ul>
+			    </div>
+			    <div class="block-pad20">
+			    	<div class="ui-flex ui-flex-align-center ui-form-item">
+			    		<div><img style="vertical-align:middle;margin-right:5px" src="../image/bank/icbc.png" ></div> <div class="fz-14" style="padding-top:1px">工商银行信用卡（0000)</div>
+			    	</div>
+			        <div class="ui-form-item ui-form-item-l ui-border-tb">
+			            <label class="ui-border-r">
+			                身份证号
+			            </label>
+			            <input type="text" placeholder="请输入身份证号">
+			            <a href="#" class="ui-icon-close">
+			            </a>
+			        </div>
+			        <div class="ui-form-item ui-form-item-l ui-border-b">
+			            <label class="ui-border-r">
+			                姓名
+			            </label>
+			            <input type="text" placeholder="姓名需与身份证信息相符">
+			            <a href="#" class="ui-icon-close"></a>
+			        </div>
+			        <div class="ui-form-item ui-form-item-l ui-border-b">
+			            <label class="ui-border-r">
+			                有效期
+			            </label>
+			            <input type="text" placeholder="如03/18则输入0318">
+			            <i id="term" class="ui-icon-info-block"></i>
+			        </div>
+			        <div class="ui-form-item ui-form-item-l ui-border-b">
+			            <label class="ui-border-r">
+			                CVV2
+			            </label>
+			            <input type="text" placeholder="签名栏后三位数字">
+			            <a href="#" id="cvv2" class="ui-icon-info-block"></a>
+			        </div>			        			        
+			        <div class="ui-form-item ui-form-item-l ui-border-b">
+			            <label class="ui-border-r">
+			                手机号
+			            </label>
+			            <input type="text" placeholder="请输入手机号">
+			            <a href="#" class="ui-icon-close"></a>
+			        </div>
+			        <div class="ui-form-item ui-form-item-r ui-border-b">
+			            <input type="text" placeholder="请输入验证码">
+			            <button type="button" class="ui-border-l">重新发送</button>
+			            <a href="#" class="ui-icon-close"></a>
+			        </div>			        				        		    	
+					<div class="ui-btn-wrap">
+					    <button class="ui-btn-lg ui-btn-danger">
+					     	立即支付
+					    </button>
+					</div>			    				    			    	
+			    </div>
+				<div class="ui-dialog" id="dialog-cvv2">
+				    <div class="ui-dialog-cnt">
+				      <header class="ui-dialog-hd ui-border-b">
+				                  <h3>CVV2</h3>
+				                  <i class="ui-dialog-close" data-role="button"></i>
+				              </header>
+				        <div class="ui-dialog-bd">
+				        	<div class="ui-flex ui-flex-pack-center">
+				        		<img src="../image/cvv2.png" width="170px">
+				        	</div>
+				            <div class="ui-flex ui-flex-pack-center fz-14 ui-border-t">签名栏后三位数字</div>
+				        </div>
+				    </div>        
+				</div>
+				<div class="ui-dialog" id="dialog-term">
+				    <div class="ui-dialog-cnt">
+				      <header class="ui-dialog-hd ui-border-b">
+				                  <h3>有效期</h3>
+				                  <i class="ui-dialog-close" data-role="button"></i>
+				              </header>
+				        <div class="ui-dialog-bd">
+				        	<div class="ui-flex ui-flex-pack-center">
+				        		<img src="../image/term.png" width="170px">
+				        	</div>
+				            <div class="ui-flex ui-flex-pack-center fz-14 ui-border-t">有效期是信用卡正面签名栏后4位数字</div>
+				        </div>
+				    </div>        
+				</div>
+				<div class="ui-dialog" id="dialog-text">
+				    <div class="ui-dialog-cnt">
+				      <header class="ui-dialog-hd ui-border-b">
+				                  <h3>收不到验证码</h3>
+				                  <i class="ui-dialog-close" data-role="button"></i>
+				              </header>
+				        <div class="ui-dialog-bd">
+				            <ul class="fz-14">
+				            	<li>&bull; 请检查短信是否被手机安全中心拦截；</li>
+				            	<li>&bull; 如银行预留手机号已变更，请重新绑定；</li>
+				            	<li>&bull; 获得更多帮助，请拨打客服电话: <span class="fz-red">400-089-0098</span></li>
+				            </ul>
+				        </div>
+				    </div>        
+				</div>												    		    
+			</section>
+		</section>
+		<script>
+			$(function(){
+				$("#dialog-text").dialog("show")
+				$("#cvv2").tap(function(){
+					$("#dialog-cvv2").dialog("show");					
+				})
+				$("#term").tap(function(){
+					$("#dialog-term").dialog("show");					
+				})
+			})
+		</script>		
+	</body>
+</html>

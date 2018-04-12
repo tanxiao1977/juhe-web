@@ -1,0 +1,115 @@
+/*
+author:TanXiao
+Date:
+*/
+/*Temlate*/
+html body{
+	background:#eee;
+}
+.ui-header-positive{
+	background:#fff;
+	color:#4a4a4a;
+}
+.ui-dialog-cnt{
+	width:90%;
+}
+.ui-header-positive i{
+	color:#000;
+}
+.ui-line-dot{
+	padding-top:20px;
+	border-top:1px dashed #e0e0e0;
+}
+.ui-checkbox input:checked:before, .ui-checkbox-s input:checked:before {
+    color: #65c42d;
+}
+.ui-form-item label:not(.ui-switch):not(.ui-checkbox):not(.ui-radio) {
+    width: 75px;
+ }
+ .ui-form-item-l input:not([type=checkbox]):not([type=radio]) {
+    padding-left: 95px;
+ }
+ .ui-form-item .ui-icon-info-block {
+    position: absolute;
+    top: 0;
+    right: 6px;
+}
+@media (max-width: 320px){
+.ui-form-item .ui-icon-info-block {
+    right: 1px;
+}
+}
+.ui-loading-bright{
+    background-image: url(../image/loading_sprite_white.png)	
+}
+.i-search{
+	position: absolute;
+    top: 0;
+    right: 6px;	
+}
+.block-pad20{
+	padding:20px;
+	background:#fff;
+}
+.marginBottom10{
+	margin-bottom:10px;
+}
+.paddingT20{
+	padding-top:20px;
+}
+.paddingtb10{
+	padding:10px 0;
+}
+.paddingtb20{
+	padding:20px 0;
+}
+.icon-weixin{
+	padding-left:40px;
+	height:40px;
+	background:url("../image/icon_weixin.png") no-repeat left 5px;
+	background-size:28px 28px;
+}
+.icon-alipay{
+	padding-left:40px;
+	height:40px;
+	background:url("../image/icon_alipay.png") no-repeat left 5px;
+	background-size:28px 28px;
+}
+.icon-hnpay{
+	padding-left:40px;
+	height:40px;
+	background:url("../image/icon_hnpay.png") no-repeat left 5px;
+	background-size:28px 28px;
+}
+.fz-14{
+	font-size:14px;
+}
+.fz-40{
+	font-size:40px;
+}
+.fz-title{
+	color:#666;
+}
+.fz-gray{
+	color:#9b9b9b;
+}
+.fz-green{
+	color:#65c42d;
+}
+.fz-red{
+	color:#f95455;
+}
+.fz-blue{
+	color:#1b93eb;
+}
+.fz-bold{
+	font-weight:700;
+}
+.footer{
+	position:fixed;
+	bottom:10px;
+	left:0;
+}
+.text-box{
+	text-indent:36px;
+}
